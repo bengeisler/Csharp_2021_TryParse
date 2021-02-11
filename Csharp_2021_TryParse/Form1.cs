@@ -30,11 +30,10 @@ namespace Csharp_2021_TryParse
 					throw new ArgumentException("Eingabe in Feld 2 muss eine Zahl sein!");
 
 				// Nur Zahlen > 0 sollen akzeptiert werden
-
+				if (zahl1 <= 0) throw new ArgumentException("Zahl in Feld 1 muss > 0 sein.");
+				if (zahl2 <= 0) throw new ArgumentException("Zahl in Feld 2 muss > 0 sein.");
 
 				lblErgebnis.Text = (zahl1 + zahl2).ToString();
-
-
 			}
 			// Optional (hier keine spezifische Fehlerbehandlung erforderlich)
 			//catch (ArgumentException ex)
